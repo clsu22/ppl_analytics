@@ -1,0 +1,11 @@
+,Neg feats,Neg weights,Pos feats,Pos weights
+0,assistant_manager_jobtitle,-1.1562553294512379,communication_skills,0.753992947526981
+1,administrative_jobtitle,-0.9070887715245427,shortest_tenure,0.668474791932946
+2,trilingual_flag,-0.45299977581883233,cashier_jobtitle,0.6307686806074395
+3,flag_hd_bachelor_plus,-0.4428926539954694,flag_hd_highschool,0.591909927332456
+4,Consumer_electronics_industry_exp,-0.38307862541699694,rehired_flag,0.45973255546451014
+5,cook_jobtitle,-0.34236211284580903,job_hopper,0.3154700026641509
+6,interactive_arts_and_technology_concentration,-0.2972119000686286,computer_systems_concentration,0.3117085372041378
+7,telco_electro_jobs,-0.28158258276333714,clean_Flesch-Kincaid_readability,0.30850832661044203
+8,problem_solver,-0.27568659951378066,general_concentration,0.307730012698994
+9,business_flag,-0.27388980556309533,leadership_mention,0.27367072048316105

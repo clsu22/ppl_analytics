@@ -1,0 +1,95 @@
+---
+title: "03_EDA"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(readxl)
+library(janitor)
+
+# load sheets
+active_leave <- read_xlsx('../../../Glentel Inc/HR Analytics - Documents/Capstone Data/V2 data 5.1.2020/Active + Leave (Weekly) - 2020_04_28.xlsx')
+active_leave <- clean_names(active_leave)
+
+new_hire <- read_xlsx('../../../Glentel Inc/HR Analytics - Documents/Capstone Data/V2 data 5.1.2020/New Hires - 2020.04.28.xlsx')
+new_hire <- clean_names(new_hire)
+
+#grab employee code
+df_resume <- read_csv('../../../Glentel Inc/HR Analytics - Documents/Capstone Data/ubc_mds_team_share/02_eda_data/output/train_dataset.csv')
+df_resume <- clean_names(df_resume)
+employee_code_t <- df_resume$employee_code
+term <- read_xlsx("../../../Glentel Inc/HR Analytics - Documents/Capstone Data/V2 data 5.1.2020/Terminations - 2020.04.28.xlsx")
+term <- clean_names(term)
+term_join <- left_join(df_resume, term, by="employee_code")
+
+```
+
+
+### How many ended being terminated, why? Is the termination rate different in non-high vs high perf? Are there high performers who were fired? Why?
+
+### Termination rate
+
+```{r term count, echo=FALSE}
+## termination reasons, filter train set
+term_counts <- term_join %>% 
+  select(employee_code, termination_type.y ) %>%
+  distinct(employee_code, .keep_all = TRUE) %>% 
+  group_by(termination_type.y) %>% 
+  count()
+
+term_counts[is.na(term_counts)] = "Active"
+  
+ggplot(term_counts, aes(x=termination_type.y, y=n))+
+    xlab("Termination Type")+
+    geom_bar(position="dodge", stat="identity")+
+    theme_minimal()
+
+```
+
+
+### Termination tenure
+
+How long are people lasting before termination
+```{r term tenure, echo=FALSE}
+term_diff_day <- term_join %>% 
+  filter(termination_type.x == "Resignation") %>%
+  select(max_hire_date, termination_date.x) %>% 
+  mutate(tenure = termination_date.x - max_hire_date)
+
+
+ggplot(term_diff_day, aes(x=tenure))+
+  geom_histogram()+
+  geom_vline(xintercept=90, color="red")
+
+```
+
+
+## Transfers and promotions. (active+leaves) Lets understand how employees move within the company within the performance window.
+
+### Job title change distribution + job type
+```{r job title, echo=TRUE}
+dist_jobtitle_changes <- with(active_leave, tapply(job_title, employee_code, FUN = function(x) length(unique(x))))
+jobtitle_change <- tibble(employee_code = unique(active_leave$employee_code), num_jobtitle_change = dist_jobtitle_changes)
+
+jobtitle_change_join <- left_join(df_resume, jobtitle_change, by = "employee_code")
+
+ggplot(jobtitle_change_join, aes(x=as.factor(num_jobtitle_change), fill=job_title))+
+  geom_bar(stat="count")+
+  xlab("Number of Job Changes")+
+  theme_minimal()
+
+```
+
+
+### contract change (parttime to permanent or viceversa), how many had changes done over the performance period in their contract?
+```{r work_category, echo=TRUE}
+dist_count_worker_category <- with(active_leave, tapply(worker_category, employee_code, FUN = function(x) length(unique(x))))
+
+count_worker_catagory <- tibble(employee_code = unique(active_leave$employee_code), worker_count = dist_count_worker_category)
+
+sum(count_worker_catagory$worker_count > 1)
+```
+
+**only 12 for the whole employment population not very insightful**
