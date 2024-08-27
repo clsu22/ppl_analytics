@@ -1,0 +1,11 @@
+,Neg feats,Neg weights,Pos feats,Pos weights
+0,Food-Convenience-Pharmacy_industry_exp,-1.2060076371282258,sports_mention,0.7629534093943036
+1,Food_Service_industry_exp,-0.965948204523379,Sport_Travel_Enterntain_Hotel_industry_exp,0.6566273560569945
+2,telco_electro_recency,-0.5299134400579106,average_tenure_per_job,0.6502741476519046
+3,no_lang_spoken,-0.49964996501194753,flag_hd_bachelor_plus,0.5823288241858301
+4,business_flag,-0.40633811717648605,flag_hd_highschool,0.43737300495788195
+5,clean_Flesch-Kincaid_readability,-0.3896086361136548,general_concentration,0.3419618228020479
+6,interactive_arts_and_technology_concentration,-0.28650536940200455,no_jobs,0.3223714665312402
+7,volunteer_exp,-0.2673786810895565,computer_systems_concentration,0.31812084491704723
+8,longest_tenure,-0.2668058954517179,leadership_mention,0.2783528630409605
+9,other_concentration,-0.2569414463174303,trilingual_flag,0.27196760551625676

@@ -1,0 +1,11 @@
+,Neg feats,Neg weights,Pos feats,Pos weights
+0,flag_hd_highschool,-0.017765258281757526,competitor_experience,0.0376035549573447
+1,fitness_sports_jobtitle,-0.004068304719401906,trilingual_flag,0.03114249368044349
+2,accounting_concentration,0.0,sales_customer_base_exp,0.02095884962331314
+3,background_highest_degree_notspecified,0.0,finance_concentration,0.019978129021994376
+4,background_highest_degree_marketing,-0.0,shortest_tenure,0.009485062039261978
+5,background_highest_degree_law,-0.0,communication_skills,0.004577863601672154
+6,background_highest_degree_interactive art technology,-0.0,cashier_jobtitle,0.0012119591968567807
+7,background_highest_degree_general,-0.0,raw_dale_chall_readability,0.0
+8,background_highest_degree_finance,0.0,goal_record,0.0
+9,background_highest_degree_engineering,-0.0,volunteer_exp,0.0

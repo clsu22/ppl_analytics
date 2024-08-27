@@ -1,0 +1,1 @@
+finalist = joblib.load(f"./result/{finalist}")

@@ -1,0 +1,16 @@
+---
+title: "try_python_code"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(reticulate)
+use_python("~/anaconda3/bin/python")
+```
+
+```{python include=FALSE}
+import pandas as pd
+mod_sel_result = pd.read_csv("result/result_cv-test-merged.csv", header=[0,1], index_col=[0])
+```
+

@@ -1,0 +1,16 @@
+,academic_background,educational_level,internal_glentel_profile,job_counts,job_tenure_general,job_tenure_industry,knowledge_and_skills,readability,work_experience_industry,work_experience_industry_recency,work_experience_position
+0,accounting_concentration,highest_degree,rehired_flag,telco_electro_jobs,job_hopper,sales_exp_months,no_lang_spoken,raw_dale_chall_readability,competitor_experience,recency_type_telco_electro_exp,administrative_jobtitle
+1,arts_concentration,country_highest_degree,referral_flag,no_jobs,average_tenure_per_job,customer_serv_exp_months,trilingual_flag,clean_Flesch-Kincaid_readability,Clothing_and_Footwear_industry_exp,telco_electro_recency,assistant_manager_jobtitle
+2,business_concentration,flag_hd_bachelor_plus,,no_job_categorical,shortest_tenure,leader_ship_exp_months,goal_record,read_score_categorical,Consumer_electronics_industry_exp,,blue_collar_jobtitle
+3,computer_systems_concentration,flag_hd_highschool,,telco_electro_perc_group,total_experience_months,,sales_customer_base_exp,,Food_Service_industry_exp,,cashier_jobtitle
+4,engineering_concentration,,,,longest_tenure,,volunteer_exp,,Food-Convenience-Pharmacy_industry_exp,,cook_jobtitle
+5,finance_concentration,,,,,,problem_solver,,Other_industry_exp,,customer_service_representative_jobtitle
+6,general_concentration,,,,,,sports_mention,,Sport_Travel_Enterntain_Hotel_industry_exp,,driver_jobtitle
+7,human_resource_concentration,,,,,,communication_skills,,,,education_jobtitle
+8,interactive_arts_and_technology_concentration,,,,,,team_player,,,,financial_services_jobtitle
+9,marketing_concentration,,,,,,leadership_mention,,,,fitness_sports_jobtitle
+10,other_concentration,,,,,,,,,,manager_jobtitle
+11,background_highest_degree,,,,,,,,,,other_jobtitle
+12,business_flag,,,,,,,,,,sales_associate_jobtitle
+13,,,,,,,,,,,technicians_jobtitle
+14,,,,,,,,,,,telemarketers_jobtitle
