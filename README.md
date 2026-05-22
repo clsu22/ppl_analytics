@@ -235,6 +235,7 @@ The main software required is
   
 ## Authors <a name = "authors"></a>
 
+Haoyu (Clara) Su | [@clsu22](https://github.com/clsu22)
 
 Manual Maldonado | [@manu2856](https://github.com/manu2856)
 
@@ -242,7 +243,6 @@ Robert Pimentel | [@robilizando](https://github.com/robilizando)
 
 Thomas Pin | [@MrThomasPin](https://github.com/MrThomasPin)
 
-Haoyu (Clara) Su | [@clsu22](https://github.com/clsu22)
 
 ## Acknowledgements <a name = "acknowledgements"></a>
 
